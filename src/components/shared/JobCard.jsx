@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
 const JobCard = ({ job }) => {
   const {
+    _id,
     title,
     company,
     company_logo,
@@ -61,12 +63,14 @@ const JobCard = ({ job }) => {
 
       {/* Footer Section */}
       <div className="p-4 border-t mt-auto">
-        <button
-          className="btn btn-sm w-full bg-blue-600 hover:bg-blue-700 text-white 
+        <Link to={`/jobs/${_id}`}>
+          <button
+            className="btn btn-sm w-full bg-blue-600 hover:bg-blue-700 text-white 
           rounded-lg transition-colors duration-200"
-        >
-          View Details
-        </button>
+          >
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
