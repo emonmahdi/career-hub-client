@@ -1,11 +1,12 @@
 import React from 'react'
+import Banner from "../../components/ui/Banner";
 
 const Home = () => {
   return (
-    <div className='py-12 mx-w-7xl px-6'>
-        <h2>This is home page</h2>
+    <div className="mx-w-7xl">
+      <Banner />
     </div>
-  )
-}
+  );
+};
 
 export default Home
