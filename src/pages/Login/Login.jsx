@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import registerImg from "../../assets/register.png";
 import { AuthContext } from "../../Contexts/AuthContext";
+import SignInGoogleBtn from "../../components/ui/SignInGooglebtn";
+import { useNavigate } from "react-router";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -14,6 +18,7 @@ const Login = () => {
     signInUser(email, password).then((result) => {
       console.log("successfully login user", result.user);
     });
+    navigate("/");
   };
 
   return (
@@ -49,6 +54,7 @@ const Login = () => {
                 </button>
               </fieldset>
             </form>
+            <SignInGoogleBtn></SignInGoogleBtn>
           </div>
         </div>
       </div>

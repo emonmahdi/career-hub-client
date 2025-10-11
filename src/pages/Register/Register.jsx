@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import registerImg from "../../assets/register.png";
 import { AuthContext } from "../../Contexts/AuthContext";
+import SignInGoogleBtn from "../../components/ui/SignInGooglebtn";
+import { useNavigate } from "react-router";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -13,11 +17,13 @@ const Register = () => {
     console.log(email, password);
 
     createUser(email, password)
-    .then((result) => {
-      console.log(result.user)
-    }).catch((err) => {
-      console.log(err)
-    }) 
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -53,6 +59,7 @@ const Register = () => {
                 </button>
               </fieldset>
             </form>
+            <SignInGoogleBtn></SignInGoogleBtn>
           </div>
         </div>
       </div>
