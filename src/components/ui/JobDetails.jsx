@@ -115,7 +115,7 @@ const JobDetails = () => {
           </p>
         </div>
 
-        <Link to={`/apply/${_id}`} className="mt-4 sm:mt-0">
+        <Link to={`/jobApply/${_id}`} className="mt-4 sm:mt-0">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition duration-200">
             Apply Now
           </button>
