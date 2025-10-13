@@ -2,14 +2,23 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import { AuthContext } from "../../Contexts/AuthContext";
 
-const links = (
-  <>
-    <NavLink to="/">Home</NavLink>
-  </>
-);
+
 
 const NavBar = () => {
   const { user, signOutUser } = useContext(AuthContext);
+
+  const links = (
+    <>
+      <NavLink to="/" className={"me-2"}>
+        Home
+      </NavLink>
+      {user && (
+        <>
+          <NavLink to="/myApplication">My Application</NavLink>
+        </>
+      )}
+    </>
+  );
 
   const handleSignOut = () => {
     signOutUser()
