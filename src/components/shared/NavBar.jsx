@@ -14,7 +14,16 @@ const NavBar = () => {
       </NavLink>
       {user && (
         <>
-          <NavLink to="/myApplication">My Application</NavLink>
+          <NavLink to="/myApplication" className={"me-2"}>
+            My Application
+          </NavLink>
+        </>
+      )}
+      {user && (
+        <>
+          <NavLink to="/addJob" className={"me-2"}>
+            Add Job
+          </NavLink>
         </>
       )}
     </>

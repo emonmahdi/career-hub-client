@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "/addJobs",
+        path: "/addJob",
         element: (
           <PrivateRouter>
             <AddJob></AddJob>
