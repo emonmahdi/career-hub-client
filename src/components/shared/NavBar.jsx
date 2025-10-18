@@ -24,6 +24,9 @@ const NavBar = () => {
           <NavLink to="/addJob" className={"me-2"}>
             Add Job
           </NavLink>
+          <NavLink to="/postMyJobs" className={"me-2"}>
+            Post Job
+          </NavLink>
         </>
       )}
     </>
