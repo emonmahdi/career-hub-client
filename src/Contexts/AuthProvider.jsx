@@ -9,6 +9,8 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.init";
+import axios from "axios";
+// import axios from "axios";
 
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -40,10 +42,40 @@ const AuthProvider = ({ children }) => {
 
   // state hold the user
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (createUser) => {
-      setUser(createUser);
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
       setLoading(false);
-      console.log(createUser);
+
+      // if (currentUser?.email) {
+      //   const userData = { email: currentUser?.email };
+      //   axios
+      //     .post(`http://localhost:5000/jwt`, userData, {
+      //       withCredentials: true,
+      //     })
+      //     .then((res) => {
+      //       console.log(res?.data);
+      //     })
+      //     .catch((err) => {
+      //       console.log(err);
+      //     });
+      // }
+      // jwt
+
+      if (currentUser?.email) {
+        const userData = { email: currentUser?.email };
+        axios
+          .post("http://localhost:5000/jwt", userData, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+
+      console.log(currentUser);
     });
     return () => {
       unSubscribe();
