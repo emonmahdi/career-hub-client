@@ -175,7 +175,7 @@ const JobCard = ({ job }) => {
       {/* Footer */}
       <div className="p-5 border-t bg-gray-50">
         <Link to={`/jobs/${_id}`}>
-          <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-lg font-medium transition">
+          <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-lg font-medium transition cursor-pointer">
             View Details
           </button>
         </Link>
