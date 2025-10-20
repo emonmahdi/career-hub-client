@@ -23,7 +23,13 @@ const PostMyJobs = () => {
       </div>
 
       <Suspense
-        fallback={<div className="text-center p-5">Loading jobs...</div>}
+        fallback={
+          <div className="flex justify-center items-center h-48">
+            <button className="btn btn-ghost loading text-primary text-lg">
+              Loading jobs...
+            </button>
+          </div>
+        }
       >
         <JobLists myJobPostPromise={myJobPostPromise} />
       </Suspense>

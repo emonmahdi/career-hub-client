@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import Banner from "../../components/ui/Banner";
 import HotJobs from "./HotJobs";
+import UserFeedback from "./UserFeedback";
+import AboutSection from "./AboutSection";
 
 // lazy load
 const HotJobsOptimize = lazy(() => import("./HotJobs"));
@@ -21,6 +23,8 @@ const Home = () => {
       >
         <HotJobsOptimize />
       </Suspense>
+      <AboutSection />
+      <UserFeedback />
     </div>
   );
 };

@@ -170,7 +170,7 @@ const NavBar = () => {
             </NavLink>
           )}
           <NavLink
-            to="/post-job"
+            to="/postMyJobs"
             className="bg-teal-600 px-4 py-2 text-white rounded hover:bg-teal-700"
           >
             Post Job

@@ -200,7 +200,7 @@ const JobApply = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-lg rounded-md shadow-md transition-all"
+            className="btn w-full bg-teal-600 hover:bg-teal-700 text-white font-medium text-lg rounded-md shadow-md transition-all"
           >
             Submit Application
           </button>

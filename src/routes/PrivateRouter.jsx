@@ -8,8 +8,10 @@ const PrivateRouter = ({children}) => {
 
     if (loading) {
       return (
-        <div className="text-center mt-10 text-gray-600 font-medium">
-          Loading Auth......
+        <div className="flex justify-center items-center h-48">
+          <button className="btn btn-ghost loading text-primary text-lg">
+            Loading Auth...
+          </button>
         </div>
       );
     }
