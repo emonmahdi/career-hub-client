@@ -30,7 +30,7 @@
 
 //     // save the database newJob
 //     axios
-//       .post("http://localhost:5000/jobs", newJob)
+//       .post("https://career-hub-server-nu.vercel.app/jobs", newJob)
 //       .then((res) => {
 //         console.log(res);
 //         if (res.data.insertedId) {
@@ -277,7 +277,7 @@ const AddJob = () => {
     newJob.status = "active";
 
     try {
-      const res = await axios.post("http://localhost:5000/jobs", newJob);
+      const res = await axios.post("https://career-hub-server-nu.vercel.app/jobs", newJob);
       if (res.data.insertedId) {
         Swal.fire({
           icon: "success",

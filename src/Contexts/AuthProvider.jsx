@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
       // if (currentUser?.email) {
       //   const userData = { email: currentUser?.email };
       //   axios
-      //     .post(`http://localhost:5000/jwt`, userData, {
+      //     .post(`https://career-hub-server-nu.vercel.app/jwt`, userData, {
       //       withCredentials: true,
       //     })
       //     .then((res) => {
@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser?.email) {
         const userData = { email: currentUser?.email };
         axios
-          .post("http://localhost:5000/jwt", userData, {
+          .post("https://career-hub-server-nu.vercel.app/jwt", userData, {
             withCredentials: true,
           })
           .then((res) => {

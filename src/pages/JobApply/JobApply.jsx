@@ -27,7 +27,7 @@
 
 //     // post fetch url
 //     axios
-//       .post("http://localhost:5000/application", application)
+//       .post("https://career-hub-server-nu.vercel.app/application", application)
 //       .then((res) => {
 //         console.log(res.data);
 //         if (res.data.insertedId) {
@@ -113,7 +113,7 @@ const JobApply = () => {
     };
 
     axios
-      .post("http://localhost:5000/application", application)
+      .post("https://career-hub-server-nu.vercel.app/application", application)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
