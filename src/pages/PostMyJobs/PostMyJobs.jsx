@@ -7,7 +7,7 @@ const PostMyJobs = () => {
   const { user } = UseAuth();
 
   // Should be async fetched, not called directly like this - but keeping your structure
-  const myJobPostPromise = createJobByEmail(user?.email);
+  const myJobPostPromise = createJobByEmail(user?.email, user?.accessToken);
 
   return (
     <div className="p-5 md:p-10">

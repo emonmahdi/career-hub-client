@@ -7,7 +7,9 @@ import { myApplicationJobs } from "../../api/myApplicationJobs";
 const MyApplications = () => {
   const { user } = UseAuth();
  
-  const applicationsPromise = myApplicationJobs(user?.email);
+  const applicationsPromise = myApplicationJobs(user?.email, user?.accessToken);
+
+  console.log(user.accessToken);
 
   return (
     <div>
